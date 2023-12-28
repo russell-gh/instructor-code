@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="count"></div>
+    <button id="button">Add 1</button>
+  </body>
+</html>
+<script>
+  appData = { count: 0 };
+
+  document.getElementById("count").innerText = appData.count;
+
+  button.addEventListener("click", () => {
+    appData.count += 1;
+    document.getElementById("count").innerText = appData.count;
+  });
+</script>

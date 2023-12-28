@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* part 1 */
+      body {
+        font-family: "Courier New", Courier, monospace;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        list-style: none;
+      }
+      nav ul ul {
+        display: none;
+      }
+      nav ul li:hover > ul {
+        display: inherit;
+      }      /* part 2 */
+      nav {
+        background-color: blue;
+        color: white;
+      }
+      nav a:hover {
+        background: black;
+      }
+      nav ul li {
+        display: inline-block;
+        background-color: blue;
+      }
+      nav ul ul {
+        position: absolute;
+        top: 60px;
+      }
+      nav ul ul li {
+        display: list-item;
+        width: 170px;
+      }      /* part 3 */
+      nav ul {
+        padding: 0;
+        margin: 0;
+        position: relative;
+      }
+      nav a {
+        line-height: 40px;
+        padding: 10px;
+        display: block;
+      }
+      nav ul ul li {
+        width: 125px;
+        line-height: 40px;        padding-left: 10px;
+        padding-right: 10px;
+      }      /* part 4 */
+      a {
+        color: white;
+        text-decoration: none;
+        margin: 0;
+        padding: 0px;
+        line-height: 50px;
+        font-size: 16px;
+      }
+      nav {
+        /* margin: 20px; */
+        background-color: red;
+      }      /* part 5 */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+            <ul>
+              <li>Home 1</li>
+              <li>Home 2</li>
+              <li>Home 3</li>
+              <li>Home 4</li>
+              <li>Home 5</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Products</a>
+            <ul>
+              <li>Product 1</li>
+              <li>Product 2</li>
+              <li>Product 3</li>
+              <li>Product 4</li>
+              <li>Product 5</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

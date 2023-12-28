@@ -1,0 +1,60 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: red;
+}
+
+div {
+  display: inline-block;
+  background-color: aqua;
+}
+
+div {
+  display: inline-block;
+  background-color: aqua;
+}
+div p {
+  font-size: x-large;
+}
+
+div {
+  background-color: #ff0000;
+}
+
+div {
+  background-color: #f4f4f4;
+}
+
+ul {
+  color: blue;
+}
+ul li {
+  padding: 10px;
+}
+ul li ul {
+  display: none;
+}
+ul li ul:hover, ul li ul:focus {
+  color: green;
+}
+
+/* This CSS will print because %message-shared is extended. */
+.warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}/*# sourceMappingURL=sass.css.map */

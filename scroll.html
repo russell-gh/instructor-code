@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body id="body"></body>
+</html>
+
+<script>
+  window.addEventListener("scroll", myScript);
+  function myScript() {
+    console.log(window.scrollY);
+
+    if (window.scrollY > 200) {
+      let body = document.getElementById("body");
+      body.style.backgroundColor = "red";
+    }
+
+    if (window.scrollY > 400) {
+      let body = document.getElementById("body");
+      body.style.backgroundColor = "green";
+    }
+
+    if (window.scrollY > 600) {
+      let body = document.getElementById("body");
+      body.style.backgroundColor = "blue";
+    }
+
+    // let body = document.getElementById("body");
+    // body.style.backgroundColor =
+    //   "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0");
+
+    window.scrollTo(9000, 9000);
+  }
+</script>

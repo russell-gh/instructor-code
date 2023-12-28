@@ -1,0 +1,237 @@
+Homework:Create a javascript file which shows an example of the following key javascript syntax1.        
+
+In a series of variables store:a.        
+A string
+b.        A number
+c.        A Boolean2. 
+Add two numbers3. 
+Concatenate two string4. 
+Create an IF statement which checks if a name variable matches another variable, if so it should console log a message5. 
+Extend the IF statement to have an ELSE IF to show an alternative message if the first comparison fails6. 
+Extend one of the IF statements to check if two things are true, if so show a message
+
+
+
+
+
+Homework part 2:
+
+    Store in a variable someone’s name, age and height. Choose between an object and an array.
+
+ 
+ 2. Convert the persons name in the first task to lower case. 3. Console log the first character of the persons name. 4. Store in a variable a list of days of the week. Choose between an object and an array. 5. Write a function with the following behavior
+   -      takes an array as a parameter
+   -      reverses the order of the array
+   -      returns the reversed array 6. Place the above function into the object (assuming you used an object for task 1) 7. Call the function inside the object. (edited) 
+   
+   
+   
+   
+   Homework:
+   
+       Complete an efficient version of fizz buzz. Try to not repeat code!
+   
+    
+ 2. Take the below array: var array = ['Green', 'Red', 'Blue', 'Orange']' a. Remove the item ‘red’ from the array: b. Move the item ‘blue to the start of the array. c. Create a loop which console logs each color in the array. d. Modify the loop so it does not console log the color ‘green’, do not remove ‘green’ from the array to solve this. 3. Optional: Start working through code wars https://www.codewars.com/?language=javascript
+ 
+ 
+ 
+ Object Orientated Programming vs Objects, what is the difference:An Object is an abstract data type created by a developer. It can include multiple properties (variables) and methods (functions) and may even contain other objects.Object-oriented programming means you employ the following concepts in your code: encapsulation, abstraction, inheritance and polymorphism.
+ 
+ 
+ Homework Part 2:
+ 
+     Create a function, inside the function add a second function, and again add a third function into the second function.
+     Create 3 variables.
+     Define 3 the variables in the correct place so that:
+ 
+     The first variable is accessible inside every function.
+     The second variable is accessible inside the second and third function only.
+     The third variable is accessible inside the third function only.
+ 
+  
+ 4. Define a 4th variable inside the 3rd function. This variable should be accessible by every function.
+ 5. Create a scope inside the 3rd function, place a variable inside it that is only accessible inside that scope.
+ 6. Create an object which contains a function which console.logs this.something, where something is any name you like.
+ 7. Create an object which contains a variable which has the same name as you used above.
+8. Use call to send the object at q7 to the function inside q6, forcing the function to use the this you sent it.
+
+
+
+ Homework:
+ 
+     Create a function that accepts two numbers, adds them and returns the result.
+     Create a defensive check inside the function that handles if the inputs to the function are invalid/non existent.
+     Create a switch statement, simply to demonstrate your competency with the syntax.
+     Use a timer to console log a message every 5 seconds.
+     Create a new date object, set the date object to hold the date and time you first started this course.
+     Console log the above date in the format: Month Day Year
+     Watch the Tom Scott video (10 mins)
+     Optional: Create a function that takes the time a person wakes up and the time a person goes to sleep (yet nothing to do with any particular day). The function should return 3 possible answers.
+ 
+     If the person is not yet awake, return the date and time when they are next awake.
+     If the person is awake, return now.
+    If the person has gone to sleep, return the date and time they are next awake.
+    
+    
+    
+    
+    Homework:Take the attached BMI calculator code. Extend the code to add the following features.
+    
+        Check if a user is under 18. If they are, do not show them the BMI calculation, show them a message.
+        Check that a user enters valid values in age, height and weight. Example, age would always be above 0 and height would never be more than 2.5 meters. If the users values look wrong a message.
+        Optional: Disable the Calculate BMI button if the user has not entered anything into the 3 input boxes, enable it if the user enters valid values.
+    
+        Tip: document.getElementById("button").disabled = true;
+    
+    Optional: Rather than showing the BMI number on its own. Show a bar with an arrow just like the NHS web site.
+    
+    
+    
+    
+    
+    Homework:
+    
+        Create two objects. Add more than two keys/values to both objects. Copy all the items from the first object into the second object. Use the spread operator.
+        Add a function to one of the objects, use the object method shorthand.
+        Create an array containing a few items.
+        Loop over the array using the ‘for of” syntax.
+        Create a class that represents a shop.
+        Add a function called shopName that returns the shops name.
+        Create a new class that represents a product and extends shop.
+        Add a function called productName that returns the product name and the shops name.
+    
+     
+Tip: You will need to make instances of each class to call the functions.
+
+
+
+Homework:Take the attached login html file.Modify the code to support the following:
+
+    Add a username field and choose an error message when the username is too short. Your code should show the error when the username is too short.
+    Currently the code checks that every input is 10 characters or less before showing the message (line 57). Change this so the email must be 20 characters long, the password must be more than 8 characters and the username 11 characters long. Tip, I briefly showed solution in Tuesdays video.
+    Optional: Check that the email contains the @ symbol.
+    Optional: Check that the password contains at least 1 number, 1 character and 1 special character.
+    Very Optional: Show a different error message per input field to show the user the reason the input was invalid. Try to write little code!
+    
+    
+    
+    
+    
+    Homework:
+    
+        Complete the DOM Selection Challenge.
+    
+     
+It seemed like no one made much progress, so this may be enough until Thursday. If not I can post some more. I think understanding DOM selectors is what’s important at this stage.
+
+
+
+Homework:Implement Joi to validate the user input, rather than the if statements which currently exist (lines 72 to 98).You can still use regex.Refer to the docs to find the various validation methods:https://joi.dev/api/?v=17.4.02. Optional: Use the error messages Joi generates rather than the ones inside the appData object. This is because the Joi ones will describe what is wrong in a more granular way.
+
+
+Homework:
+
+    Choose any API you like or use the Simpson’s quote API - https://thesimpsonsquoteapi.glitch.me/
+    Modify the attached script to use the chosen API.
+    Console.log the data the API returns.
+    Insert the data into the DOM (think getElementById and maybe loops).
+    Optional: Do something interesting or useful with the data the API returned.
+
+Tip: Test your code using Go Live/Live Server to avoid CORS errors! (edited) 
+api_homework.html 
+
+
+
+Homework:If you have not done the React homework from last week-
+
+    Complete lasts weeks homework
+    Include the optional delete button task
+
+If you have done the React homework from last week-
+
+    Recreate the traffic lights task in React.
+    Use the below solution to implements the same functionality in React
+    Think each light as a component, the controls in a component and so on. You can use as much of the existing code as you like, just make it REACT!
+    Feel free to change and improve the solution
+
+https://codepen.io/jmsherry/pen/poyELWm
+
+
+
+Homework:1. Create a new react project
+2. Implement react router (use functional components)
+3. Create links to the following pages
+            /
+            /contact
+           /help
+4. Display different components when a user visits:
+	localhost:3000/
+	localhost:3000/contact
+	localhost:3000/help
+5. Display different data in one component based on a parameter
+            localhost:3000/help/quickstart
+            localhost:3000/help/faq So the information displayed differs when the above two urls are accessed. (edited) 
+            
+            
+            
+            Homework:Take the attached redux project. Modify it in the following ways.
+	    
+	        Add a button called reset
+	        When the button is pressed dispatch an action to the reducer
+	        Set the count to 0 when the reducer is called
+    Work on the big project!
+    
+    
+    
+    
+    Homework:Think about this real world technical interview question, to take the input and write a function that outputs the data in the format specified:
+    
+        Write comments about how you would approach the challenge
+        Write comments about the steps to solve it
+        Try and solve it
+        Optional: If you liked JQuery, re-create the traffic lights solution using JQuery!
+    
+    Given this input:const input = ['and','AND_DEFINITION']Create an Object which look like this:{
+    	letter: 'a'
+    	definition: null,
+    	children: [{
+    		letter: 'n',
+    		definition: null,
+    		children: [{
+    			letter: d,
+    			definition: 'AND_DEFINITION'
+    		}]
+    	}]
+}
+
+
+
+
+Homework:
+
+    Continue with the project!
+    Optional: Attempt the more complicated version of the algo problem below
+
+input: An array of arrays of words and definitions
+output: Build a tree that would be used as a dictionary.Use case 2
+If given this:[
+	['an','AN_DEFINITION'],
+	['and','AND_DEFINITION']
+]The resulting tree should be[{
+	letter: 'a'
+	definition: null,
+	children: [{
+		letter: 'n',
+		definition: 'AN_DEFINITION',
+		children: [{
+			letter: d,
+			definition: 'AND_DEFINITION'
+		}]
+	}]
+}] (edited) 
+
+
+
+
+    

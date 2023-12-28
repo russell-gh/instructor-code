@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noodle Api Proxy</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Noodle Api Proxy</h1>
+        <h3>Cache any API request to prevent exceeding your API limit!</h3>
+        <h2>Usage:</h2>
+        <p>Simple append the following URL to your request URL</p>
+        <p>https://noodle-api-cache.herokuapp.com/?expiry=86400&url=</p>
+        <h2>Example:</h2>
+        <p>https://thesimpsonsquoteapi.glitch.me/quotes?count=10</p>
+        <p>Becomes</p>
+        <p>
+          https://noodle-api-cache.herokuapp.com/?expiry=1000&url=https://thesimpsonsquoteapi.glitch.me/quotes?count=10
+        </p>
+        <h2>Advanced:</h2>
+        <p>
+          The expiry = property specified how long the API response should be
+          cached for. It is set in seconds. If you change the value a new API
+          request is made and the expiry updated. The default if no value is 1
+          day (86400 seconds)
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

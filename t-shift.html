@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order a t-shirt</title>
+
+
+</head>
+
+<body>
+  <header>
+    <h1>One-stop-👕-shop</h1>
+  </header>
+
+  <form method="POST" action="https://us-central1-fir-ac2be.cloudfunctions.net/formReader">
+    <fieldset>
+      <legend>About you</legend>
+      <div>
+        <label>Tell us a little about yourself and we'll find the perfect tee for you</label>
+        <p>Fields marked ❗are required</p>
+        <div><label><input type="radio" name="title" id="Mr" value="Mr">Mr</label>
+          <label><input type="radio" name="title" id="Mrs" value="Mrs">Mrs</label>
+          <label><input type="radio" name="title" id="Miss" value="Miss" checked>Miss</label>
+          <label><input type="radio" name="title" id="Miss" value="Miss">Other</label>
+        </div>
+      </div>
+
+      <!-- Input name -->
+      <div>
+        <label>
+          ❗Full name:
+          <input type="text" for="name" placeholder="Enter name" maxlength="30" required></label>
+      </div>
+
+      <!-- Input email -->
+      <div>
+        <label>
+          ❗Email:
+          <input type="email" name="email" placeholder="Enter email" maxlength="30" required></label>
+      </div>
+
+      <!-- Phone number -->
+      <div>
+        <label>
+          ❗Phone number <input type="tel" name="phone-number" placeholder="Enter number" pattern="[0-9]{11}"
+            maxlength="11" required>
+        </label>
+      </div>
+
+      <!-- Input address -->
+      <div>
+        <label>❗Where are we sending your order?</label>
+      </div>
+      <div>
+        <textarea name=" address" id="adress" cols="30" rows="10" placeholder="Enter address" maxlength="150"
+          required></textarea>
+      </div>
+    </fieldset>
+
+    <!-- Size -->
+    <fieldset>
+      <legend>Tell us about your style</legend>
+      <label>What size are you interested in?</label>
+      <div>
+        <label>XS<input type="radio" name="size" id="XS" value="XS"></label>
+        <label>S<input type="radio" name="size" id="S" value="S"></label>
+        <label>M<input type="radio" name="size" id="M" value="M" checked></label>
+        <label>L<input type="radio" name="size" id="L" value="L"></label>
+        <label>XL<input type="radio" name="size" id="XL" value="XL"></label>
+      </div>
+
+      <!-- style -->
+      <div>
+        <label>What style of tee would you like?</label>
+        <div>
+          <label>Mens<input type="radio" name="style" id="Mens" value="Mens"></label>
+          <label>Womens<input type="radio" name="style" id="Womens" value="Womens"></label>
+        </div>
+      </div>
+
+      <!-- color -->
+      <div>
+        <label>And what colour would you like?</label>
+        <div>
+          <label>Black<input type="radio" name="color" id="Black" value="Black" checked></label>
+          <label>Red<input type="radio" name="color" id="Red" value="Red"></label>
+          <label>Teal<input type="radio" name="color" id="Teal" value="Teal"></label>
+          <label>Yellow<input type="radio" name="color" id="Yellow" value="Yellow"></label>
+          <label>Grey<input type="radio" name="color" id="Grey" value="Grey"></label>
+        </div>
+      </div>
+
+      <!-- Where is the design -->
+      <div>
+        <label>Where would you like the design?</label>
+        <div>
+          <label>Back print<input type="checkbox" name="design" value="back print"></label>
+          <label>Front print<input type="checkbox" name="design" value="Front print" checked></label>
+          <label>Details<input type="checkbox" name="design" value="Details"></label>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- How did you hear about us? -->
+    <fieldset>
+      <legend>Help us get better</legend>
+      <label for="">How did you find us?</label>
+      <div>
+        <select name="how-did-you-find-us" id="how-did-you-find-us">
+          <option value="Real life recommendation">Real life recommendation</option>
+          <option value="Twitter">Twitter</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Instagram">Instagram</option>
+          <option value="Googled for cool-t-shirts">Googled 'cool-t-shirts'</option>
+        </select>
+      </div>
+      </div>
+
+      <div>
+        <label>How did we do today on a scale of 1 (shocking) to 5 (amazing)?</label>
+        <div>
+          <label><input type="radio" name="customer-satisfaction" value="1">1</label>
+          <label><input type="radio" name="customer-satisfaction" value="2">2</label>
+          <label><input type="radio" name="customer-satisfaction" value="3" checked>3</label>
+          <label><input type="radio" name="customer-satisfaction" value="4">4</label>
+          <label><input type="radio" name="customer-satisfaction" value="5">5</label>
+        </div>
+      </div>
+    </fieldset>
+
+    <button type="submit">😃 Submit Order</button>
+    <button type="reset"> 🤔 Reset selection</button>
+  </form>
+</body>
+
+</html>

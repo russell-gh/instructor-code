@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>£<span id="price">9.99</span></p>
+    <button id="add">Add</button>
+    <p id="count">0</p>
+    <button id="remove">Remove</button>
+    <p>Total: £<span id="total">0.00</span></p>
+  </body>
+</html>
+
+<script>
+  var addButton = document.getElementById("add");
+  var removeButton = document.getElementById("remove");
+
+  addButton.addEventListener("click", function () {
+    var currentCount = document.getElementById("count");
+
+    currentCount.innerText = Number(currentCount.innerText) + 1;
+
+    //
+    var itemPrice = document.getElementById("price").innerText;
+    var total = document.getElementById("total");
+    total.innerText = currentCount.innerText * itemPrice;
+  });
+
+  removeButton.addEventListener("click", function () {
+    var currentCount = document.getElementById("count");
+
+    currentCount.innerText = Number(currentCount.innerText) - 1;
+  });
+</script>

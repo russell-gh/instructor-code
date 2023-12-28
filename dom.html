@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .russell {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="intro"></div>
+    <div id="head">444</div>
+  </body>
+</html>
+
+<script>
+  //ready to go
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("dom loaded1");
+  });
+
+  //fully
+  window.addEventListener("load", () => {
+    console.log("dom loaded2");
+  });
+
+  //fully
+  //   window.onload = () => {}; //do someting
+
+  //   confirm("Are you sure!");
+
+  //   prompt("What us your age!");
+
+  //   window.innerWidth; // outer with scroll
+
+  //   window.document;
+
+  //   window.document.intro = "123";
+
+  //   const inf = document.querySelectorAll('input:not([name="firstname"])');
+  //   document.querySelector;
+
+  //   const closest = submitButton.closest(".row"); //weird!!!!
+
+  //   const item = document.getElementsByClassName("");
+
+  const item = document.getElementById("head");
+  item.textContent = "xyz";
+
+  item.classList.toggle("russell");
+  console.log(item.classList.item(0));
+</script>

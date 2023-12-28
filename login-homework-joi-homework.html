@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joi</title>
+    <script src="https://cdn.jsdelivr.net/npm/joi-browser@13.4.0/dist/joi-browser.min.js"></script>
+  </head>
+
+  <style>
+    div {
+      margin: 25px;
+    }
+    label {
+      display: block;
+    }
+    .container {
+      width: 300px;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div>
+        <label for="">Email</label><input type="text" id="email" />
+        <div id="emailInfo"></div>
+      </div>
+      <div>
+        <label for="">Password</label><input type="text" id="password" />
+        <div id="passwordInfo"></div>
+      </div>
+      <div>
+        <label for="">Username</label><input type="text" id="username" />
+        <div id="usernameInfo"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let appData = {
+    email: null,
+    emailLengthMessage: "Email too short",
+    emailContainsMessage: "You must use an @",
+    emailLength: 20,
+    password: null,
+    passwordLengthMessage: "Password too short",
+    passwordContainsMessage:
+      "Use a special character, number, upper and lower case letter",
+    passwordLength: 8,
+    username: null,
+    usernameLengthMessage: "Username too short",
+    usernameLength: 11,
+  };
+
+  let validation = {
+    email: emailValidation,
+    password: passwordValidation,
+    username: usernameValidation,
+  };
+
+  document.addEventListener("input", (event) => {
+    appData[event.target.id] = event.target.value;
+
+    validationText = validation[event.target.id]() || "";
+
+    document.getElementById(
+      event.target.id + "Info"
+    ).innerText = validationText;
+  });
+
+  function passwordValidation() {
+    let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%* #+=\(\)\^?&])[A-Za-z\d$@$!%* #+=\(\)\^?&]{3,}$/;
+
+    if (!appData[event.target.id].match(passwordRegex)) {
+      return appData.passwordContainsMessage;
+    }
+
+    if (appData[event.target.id].length < appData.passwordLength) {
+      return appData.passwordLengthMessage;
+    }
+  }
+
+  function usernameValidation() {
+    var userSchema = Joi.string().min(11);
+    Joi.validate(appData.username, userSchema, function (error, value) {
+      console.log(error, value);
+    });
+  }
+
+  function emailValidation() {
+    if (!appData[event.target.id].includes("@")) {
+      return appData.emailContainsMessage;
+    }
+
+    if (appData[event.target.id].length < appData.usernameLength) {
+      return appData.emailLengthMessage;
+    }
+  }
+</script>

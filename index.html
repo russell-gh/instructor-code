@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fire Behaviour</title>
+    <link rel="shortcut icon" type="image/png" href="img/robot.png" />
+    <style>
+      nav ul {
+        position: relative;
+        padding: 5px;
+      }
+
+      nav li {
+        display: inline-block;
+        color: rgb(220, 225, 226);
+        border: 1px solid rgba(245, 10, 225, 0.658);
+      }
+
+      /* List Items have no specific style applied to them*/
+      li {
+        list-style: none;
+      }
+
+      /* The "focus-within" code on line 52 is for users navigating through the
+        website using the keyboard, i.e tab function. Essentially activating the same code as 
+        Line 59 ":hover".
+        By staing "display:inherit" we are instructing the Unordered Lists to behave as their
+        parents. 
+        In addiiton, note that when a child item is activated by the tab/hover user action,
+        the parent also displays the same behaviour, i.e hover. If it did not, then the menu 
+        list would disappear when the user moved away from it. Not what we want.*/
+      nav ul li:hover > ul,
+      nav ul li:focus-within > ul {
+        display: inherit;
+        list-style: none;
+      }
+
+      /* This Rule Set specifies the color of "Anchor" tags text, because Anchors 
+        do not inherit. */
+      nav ul a {
+        color: rgb(232, 240, 241);
+        font-size: 18px;
+        text-decoration: none;
+        padding: 10px;
+        line-height: 40px;
+        display: block;
+      }
+
+      /* i have added this rule set in additon to the one above, as i didn't want padding 
+        in any anchors that are not in the main Navigation Bar, and as such will present as 
+        in-line with other UL list items.*/
+      nav ul ul a {
+        color: rgb(232, 240, 241);
+        font-size: 18px;
+        text-decoration: none;
+        padding: 0px;
+        line-height: 22px;
+      }
+
+      /* This Rule Set displays the Navigation Bar items as a list horizontally and with a
+        background color of black.*/
+      nav ul li {
+        display: inline-block;
+        background-color: rgb(0, 0, 0, 0.596);
+      }
+
+      /* The code "Display: None" means Unordered Lists and Unordered Lists within those are 
+        now hidden, until they are hovered over.*/
+      nav ul ul {
+        /* display: none; */
+      }
+
+      nav ul ul {
+        position: absolute;
+        top: 62px;
+      }
+
+      /* This Rule Set ensure that Nav Bar unordered lists items (that contain further 
+        Unordered Lists and List Items, are displayed as vertical lists.
+        It also sets the width of the menu boxes within which the text sits.*/
+      nav ul ul li {
+        display: list-item;
+        width: 350px;
+      }
+
+      ​/* This Rule Set positions the sub-menu within the sub-menu as Relative to it's parent menu.
+        The Top and Left settings allow for positioning.*/
+        ​nav ul ul ul {
+        position: relative;
+        padding: 7px;
+        left: 150px;
+      }
+
+      nav ul ul ul li {
+        position: relative;
+        top: 10px;
+        left: 25px;
+      }
+      li {
+        /* list-style: none !important; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="nav">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Sections</a>
+              <ul>
+                <li>Thermal Flowpaths</li>
+                <li>Reading Smoke</li>
+                <li>
+                  <a href="#">Case Studies</a>
+                  <ul>
+                    <li>Lakanal House</li>
+                    <li>Grenfell Tower</li>
+                    <li>Bethnal Green</li>
+                    <li>Balmoral Bar</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Resources</a>
+              <ul>
+                <li>NIST</li>
+                <li>Underwriters Laboratories</li>
+                <li>Institute of Fire Engineers</li>
+              </ul>
+            </li>
+            <li>
+              <a href="contact/contact.html" target="_blank">Contact Us</a>
+            </li>
+            <li>
+              <a href="cv/Index.html" target="_blank">About author</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <h1>Objective</h1>
+      <p>
+        The key to securing increased firefighter safety lies in understanding
+        the fundamentals of physics. Legacy training packages continue to focus
+        their materials on viewing fire behaviour from the perspective of
+        chemistry. An alternative branch of scientific enquiry is
+        required.....Physics. This does not demand that we understand Einstein's
+        theories of Special or General Relativity. Fortuntately we need only
+        consider one concept.....Pressure. This website aims to help
+        firefighters educate themselves on the subject of fire behaviour by
+        outlining the key fundamentals to pressure.
+      </p>
+      <div>
+        <div class="container-one">
+          <a href="thermal-flowpaths">
+            <figure class="one">
+              <iframe
+                width="250"
+                height="200"
+                src="https://www.youtube.com/embed/JwE1pPyXFIY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <figcaption>Thermal Flowpaths</figcaption>
+            </figure>
+          </a>
+          <a href="reading-smoke">
+            <figure class="two">
+              <iframe
+                width="250"
+                height="200"
+                src="https://www.youtube.com/embed/AzqWFQa4uSc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; 
+                    clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <figcaption>Reading Smoke</figcaption>
+            </figure>
+          </a>
+          <a href="case-studies">
+            <figure class="three">
+              <iframe
+                width="250"
+                height="200"
+                src="https://www.youtube.com/embed/6EZvGqf-wD0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; 
+                    encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <figcaption>Case Studies</figcaption>
+            </figure>
+          </a>
+        </div>
+        <div>
+          <a href="#">Top of Page</a>
+        </div>
+        <div>
+          <footer>
+            <p>&copy; Eddie Thruston 2021</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

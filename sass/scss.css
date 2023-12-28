@@ -1,0 +1,12 @@
+.help, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.help {
+  background-color: green;
+}
+.help .dodge {
+  text-decoration: underline;
+}/*# sourceMappingURL=scss.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      margin: 25px;
+    }
+    label {
+      display: block;
+    }
+    .container {
+      width: 300px;
+      margin: auto;
+    }
+    button {
+      display: inherit !important;
+      margin: auto !important;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div>
+        <label for="">Email</label><input type="text" id="email" />
+        <div id="emailInfo"></div>
+      </div>
+      <div>
+        <label for="">Password</label><input type="text" id="password" />
+        <div id="passwordInfo"></div>
+      </div>
+      <div>
+        <label for="">Username</label><input type="text" id="username" />
+        <div id="usernameInfo"></div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let appData = {
+    email: null,
+    emailMessage: "Email too short",
+    password: null,
+    passwordMessage: "Password too short",
+    username: null,
+    usernameMessage: "Username too short",
+  };
+
+  document.addEventListener("input", (event) => {
+    appData[event.target.id] = event.target.value;
+
+    if (
+      appData[event.target.id].length > 0 &&
+      appData[event.target.id].length < 10
+    ) {
+      document.getElementById(event.target.id + "Info").innerText =
+        appData[event.target.id + "Message"];
+    } else {
+      document.getElementById(event.target.id + "Info").innerText = "";
+    }
+  });
+</script>

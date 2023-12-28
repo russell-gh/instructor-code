@@ -1,0 +1,317 @@
+:root {
+  --lazerLemon: #ffff6d;
+  --corn: #ddaa00;
+  --paleCorn: #ddaa0080;
+}
+
+.italicWrapper {
+  background-image: url(../assets/stairs2crop.jpg);
+
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  max-width: 350px;
+  border-top: 5px solid var(--corn);
+  /* border-radius: 10px; */
+  margin: 20px auto 0;
+  box-shadow: 0 0 5px #000;
+}
+
+.bigItalic {
+  background-color: #0005;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #fff;
+  margin: 250px 0 0 0;
+  text-shadow: 1px 1px 2px #000;
+  padding: 10px;
+}
+
+.italicPhoto {
+  display: none;
+}
+
+.homeText {
+  margin: 40px 40px 0 40px;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.homeText p.lastParagraph {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.homeTextFaq {
+  margin: 40px 40px 0 40px;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.homeTextFaq h3 {
+  font-size: 1.05rem;
+  font-family: montserratBold;
+  color: #333;
+  margin-top: 50px;
+}
+
+.homeTextFaq p.lastParagraph {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.fullWidth {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--corn);
+
+  padding: 80px 10px;
+  margin: 0;
+}
+
+.areas h3,
+.areas2 h3 {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.areas,
+.areas2 {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.flexSupport {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul.flexSupport li {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 0 5px;
+  background-color: #ddaa0040;
+  font-weight: 600;
+  color: #333333;
+}
+
+.flexSupport li:nth-child(2n) {
+  background-color: #ddaa0060;
+}
+
+ul.flexSupport li.listEnd {
+  font-style: italic;
+
+  text-align: center;
+  padding: 5px;
+  margin: 0;
+}
+
+/* ***************************************************************************************88 */
+
+@media (min-width: 700px) {
+  .italicPhoto {
+    display: block;
+    width: 35%;
+    float: left;
+    margin: 10px 40px 20px 10px;
+    box-shadow: 0 0 10px #444;
+  }
+
+  .italicWrapper {
+    border: none;
+    background-image: none;
+    box-shadow: none;
+    max-width: none;
+  }
+
+  .bigItalic {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background-color: #ddaa0080;
+    box-shadow: 0 0 55px #fff inset;
+  }
+
+  .fullWidth {
+    font-size: 1.4rem;
+  }
+
+  .areas {
+    flex-direction: row;
+
+    margin: 100px auto 200px;
+    /* box-shadow: 0 0 10px #444; */
+  }
+
+  .areas2 {
+    flex-direction: row-reverse;
+
+    margin: 100px auto 200px;
+    /* box-shadow: 0 0 10px #444; */
+  }
+
+  .areasPicture {
+    background-image: url(../assets/notes.jpg);
+    background-position: top;
+    background-size: cover;
+    max-width: 300px;
+  }
+
+  .areasPicture2 {
+    background-image: url(../assets/desk.jpg);
+    background-position: top;
+    background-size: cover;
+    max-width: 300px;
+  }
+
+  .areasPictureSubLayer {
+    background-color: #00000080;
+    width: 100%;
+    height: 100%;
+  }
+  .areasPicture h3 {
+    font-size: 2.5rem;
+    padding: 100px 20px 0;
+    line-height: 5rem;
+    font-family: montserrat;
+    /* text-transform: uppercase; */
+    color: #fff;
+    letter-spacing: 0rem;
+  }
+
+  .areasPicture2 h3 {
+    font-size: 2.5rem;
+    padding: 50px 20px 0;
+    line-height: 5rem;
+    font-family: montserrat;
+    color: #fff;
+
+    letter-spacing: 0rem;
+  }
+
+  ul.flexSupport {
+    margin: 0;
+  }
+
+  ul.flexSupport li {
+    padding-left: 30px;
+  }
+
+  /* h3.benefitsHeader {
+    font-size: 2rem;
+  } */
+}
+
+/* for privacy policy address list */
+
+ul.noDecoration {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* for quote at bottom of ABOUT ME page */
+
+.fullWidthQuote {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1rem;
+  color: var(--corn);
+
+  padding: 10px;
+  margin: 0;
+}
+
+.henryFord {
+  text-align: center;
+
+  padding-bottom: 30px;
+  font-size: 00.8rem;
+  margin: 0;
+}
+
+.contactLink {
+  display: block;
+  margin: 0 auto 100px;
+  background-color: #fff;
+
+  color: var(--corn);
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  padding: 20px;
+  /* box-shadow: 0 0 10px #555; */
+  /* border-radius: 10px; */
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+.contactLinkButton {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--corn);
+  color: #fff;
+  border-radius: 20px;
+  max-width: 200px;
+  padding: 10px 0;
+  font-family: montserrat;
+  font-style: normal;
+}
+
+.contactLinkButton:hover {
+  opacity: 0.8;
+}
+
+.contactLink a {
+  text-decoration: none;
+}
+
+.iframeWrapper {
+  overflow: hidden;
+  position: relative;
+  width: 95%;
+  margin: 80px auto 0;
+}
+
+.iframeWrapper::after {
+  padding-top: 56.25%;
+  display: block;
+  content: "";
+}
+
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 700px) {
+  .iframeWrapper {
+    width: 60%;
+  }
+}

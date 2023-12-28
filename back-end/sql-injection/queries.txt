@@ -1,0 +1,33 @@
+
+1. Use one wildcard
+{"email":"%", "password": "password12345"}
+
+solution, check for wildcards
+
+2. Use multiple wild cards
+{"email":"%%", "password": "password12345"}
+
+solution, check for any wildcard as does include any wildcard
+
+3. Use OR condition for inverse
+{"email":"bob@tinsleymail.co.uk\" OR hashedPassword NOT LIKE \"anything I like", "password": ""}
+
+solution, OR hashedPassword NOT LIKE
+
+4. Use email instead
+
+{"email":"bob@tinsleymail.co.uk\" OR EMAIL NOT LIKE \"bob@tinsleymail.co.uk", "password": ""}
+
+solution, check for not like generally
+
+5. Use spaces!!!
+{"email":"bob@tinsleymail.co.uk\" or  email  not  like \"bob@tinsleymail.co.uk", "password": ""}
+
+Remove multiple spaces, normalise!
+
+6. Check anything in the database
+{"email":"bob@tinsleymail.co.uk\" or id > \"1", "password": ""}
+
+7. Add only 1 result and then add limit!
+
+8. Show order by or limit or similar!

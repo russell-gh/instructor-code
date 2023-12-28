@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "sources": [
+    "webpack://webpack-runthrough/./src/index.js"
+  ],
+  "names": [
+    "me",
+    "name",
+    "age",
+    "me2",
+    "console",
+    "log"
+  ],
+  "mappings": ";;;;;;;;;;;AAAA,IAAMA,EAAE,GAAG;AACTC,MAAI,EAAE,OADG;AAETC,KAAG,EAAE;AAFI,CAAX;;AAKA,IAAMC,GAAG,qBAAQH,EAAR,CAAT;;AAEAI,OAAO,CAACC,GAAR,CAAY,IAAZ,EAAkBL,EAAlB,E",
+  "file": "main.js",
+  "sourcesContent": [
+    "const me = {\r\n  name: \"james\",\r\n  age: 40,\r\n};\r\n\r\nconst me2 = { ...me };\r\n\r\nconsole.log(\"me\", me);\r\n"
+  ],
+  "sourceRoot": ""
+}

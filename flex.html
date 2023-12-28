@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .one,
+      .two,
+      .three {
+        width: 200px;
+        height: 200px;
+      }
+      .one {
+        background-color: red;
+        /* order: 3; */
+      }
+      .two {
+        background-color: green;
+        /* order: 1;
+        flex-grow: 4; */
+      }
+      .three {
+        background-color: blue;
+        /* order: 2;
+        flex-shrink: 9; */
+        /* flex-basis: 0; */
+        align-self: flex-end;
+      }
+      .container {
+        height: 400px;
+        display: flex;
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        /* justify-content: space-around; */
+        /* align-items: baseline; */
+        /* gap: 100px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">
+        1: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
+        deserunt eveniet ex velit laborum vero neque repudiandae accusantium
+        minima odit, adipisci praesentium hic odio deleniti enim nisi
+        voluptatum? Distinctio, officiis.
+      </div>
+      <div class="two">
+        2: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+        perferendis ut at ullam temporibus fugit beatae, aut aperiam id ipsa
+        excepturi! Debitis aspernatur error neque accusamus rem reiciendis
+        architecto officia! Lorem ipsum dolor sit, amet consectetur adipisicing
+        elit. Perferendis odit, nisi fuga, ipsum amet beatae totam error
+        dolorum, tempore aliquam voluptatum quisquam. Reprehenderit voluptates
+        amet molestiae laboriosam quas sint libero.
+      </div>
+      <div class="three">3</div>
+    </div>
+  </body>
+</html>

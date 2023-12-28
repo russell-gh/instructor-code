@@ -1,0 +1,148 @@
+JS Task:
+
+    Promisify setTimout
+    Consume the promise using .then syntax
+    Consume the promise using async await (do not forget to wrap in a function)
+    Do not forget to catch errors
+    
+    
+    
+    
+    
+    Classwork:1. Create an object that contains information about the make/model of a car2. Create a function outside the object which returns the make/model of the car3. Insert a reference to the function into the object created at q14. Invoke the method on the object (you should see the make/model)5. Use call to execute the function at point 2 using a different context6. Use bind to create an instance of the function that is bound to a different object7. Create an array of objects8. Duplicate the array (deep clone)9. Use a try/catch block to ensure you understand the syntax10. Create a constructor function (based on the Make/Model from earlier)11. Create two instances of it12. Add a function to the prototype13. Ensure you use “this” so function chaining works
+    
+    
+    
+    
+    
+    
+        Create a function, inside the function add a second function, and again add a third function into the second function.
+        Create 3 variables.
+        Define 3 the variables in the correct place so that:
+    
+        The first variable is accessible inside every function
+        The second variable is accessible inside the second and third function only
+        The third variable is accessible inside the third function only
+    
+     
+    4. Define a 4th variable inside the 3rd function. This variable should be accessible by every function
+    5. Create a scope inside the 3rd function, place a variable inside it that is only accessible inside that scope
+6. Write a function closure that contains an age and returns it when calle
+
+
+
+
+
+
+
+    Create a function that accepts two numbers, adds them and returns the result.
+    Create a defensive check inside the function that handles if the inputs to the function are invalid/non existent.
+    Create a timer than console.logs a message after 5 seconds
+    Create a timer than consoles.logs a message every 5 seconds
+    Write a function with the following behavior
+      -     takes an array as a parameter
+      -     reverses the order of the array
+      -     returns the reversed array
+    Write out each of the array methods so you become familiar with the syntax:
+
+    Pop
+    Push
+    Shift
+    Unshift
+    Concatenating
+    Splicing
+    Slicing
+    Reverse
+    Join
+    forEach
+    Includes
+    indexOf
+    Every
+    Some
+    Filter
+    Find
+    findIndex
+    Sort
+    Map
+
+ 
+10. Create an array of objects, map over the objects and create li tags for each item in the array (use the map method) (edited) 
+
+
+
+
+
+
+
+
+    Create an array with 10 items
+    Update one of the items
+    Delete half of the array
+    Create an object with 3 keys/values
+    Update one of the values
+    Add a new key/value
+    Add a new key/value by dynamically setting the key name
+    Use an if statement to check if the array contains more than 5 items, console log a different message based on if it does or does not.
+    Convert the if statement to a ternary and then console log the result (you can not console log inside the ternary)
+    Create a loop that iterates over an array of numbers and uses console.log to show each item in the array
+    Modify each number in the array to be itself * 2 (use the loop)
+    
+    
+    
+    
+    
+    
+    
+        In a series of variables store:
+    
+    a.        A string
+    b.        A number
+    c.        A Boolean
+    d.       Add two numbers
+    e.       Concatenate two string
+    f.        Store in a variable someone’s name, age and height. Choose between an object and an array
+    g.       Store another 3 people with different data
+    h.       Use Math.round and toFixed to change the number 9.789 to be round and have two decimal places
+i.        Make the person name in the object upper case (edited) 
+
+
+
+
+
+
+
+
+
+Project 2:Create a JS based web site that allows the user to see weather in a given location
+
+     Just like here - https://practical-mcnulty-b8423f.netlify.app/
+
+This is the more simple api - https://openweathermap.org/api/hourly-forecastThis is the more complex with more features - https://openweathermap.org/api/one-call-apiYou can let the user enter a location or use the geolocation api, if time permits offer both!Tips:Create a key at least 4 hours before you begin
+Start by just getting data into the console
+Then insert some data into the DOM
+Then insert all the data into the DOM
+Then add css classes to make it look nice
+Then solve adding the imagesThis will take classwork into the end of next week!
+
+
+
+
+
+
+
+
+
+
+Classwork:
+
+Create a class then represents anything you like
+Create a class that extends the first class
+Create a class that extends the second class
+Make sure each class has at least one method and one piece of data unique to it
+Create an instance of the final class
+Write out an example of the following syntax
+import/export of a function/variable from another file (both default and named)
+fat arrow function
+fat arrow function with default parameters
+object destructuring
+array destructuring

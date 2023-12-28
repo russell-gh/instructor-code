@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clip-circle {
+        clip-path: circle(60px at center);
+        /* OLD VALUE example: circle(245px, 140px, 50px); */
+        /* Yep, even the new clip-path has deprecated stuff. */
+        clip-path: polygon(
+          5% 5%,
+          100% 0%,
+          100% 75%,
+          75% 75%,
+          75% 100%,
+          50% 75%,
+          0% 75%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="clip-circle"
+      src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      alt=""
+    />
+  </body>
+</html>

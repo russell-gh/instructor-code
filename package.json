@@ -1,0 +1,23 @@
+{
+  "name": "instructor-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/russelljumpdigital/instructor-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/russelljumpdigital/instructor-code/issues"
+  },
+  "homepage": "https://github.com/russelljumpdigital/instructor-code#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "eslint": "^8.25.0"
+  }
+}

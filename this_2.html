@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function foo() {
+        //"use strict";
+        console.log("Simple function call");
+        console.log(this === window, this.count);
+      }
+
+      let user = {
+        count: 10,
+        foo: foo,
+        //foo1: function () {
+        //  console.log(this === window);
+        //},
+      };
+
+      //user.foo(); // Prints false because now “this” refers to user object instead of global object.
+      //let fun1 = user.foo1;
+      //fun1(); // Prints true as this method is invoked as a simple function.
+
+      //call
+      let myData = {
+        count: 999,
+      };
+      user.foo.call(myData);
+    </script>
+  </head>
+
+  <body>
+    <h1 id="message">Hello World!</h1>
+    <!-- element to be updated by onceLoaded function -->
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="" />
+    <base href="http://disney.com" />
+    <style>
+      table {
+        border: 2px solid #555;
+        border-collapse: collapse;
+        font: 16px "Lucida Grande", "Helvetica", "Arial", sans-serif;
+      }
+
+      th,
+      td {
+        border: 1px solid #bbb;
+        padding: 2px 8px 0;
+        text-align: left;
+      }
+
+      thead > tr > th {
+        background-color: #cce;
+        font-size: 18px;
+        border-bottom: 2px solid #999;
+      }
+      tbody > tr > th {
+        background-color: #dde;
+        border-bottom: 1.5px solid #bbb;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Name</legend>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" />
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Gender</legend>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male" />
+
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female" />
+
+        <label for="other">Other</label>
+        <input type="radio" id="other" name="gender" value="other" />
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <table>
+      <caption>
+        People
+      </caption>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <th>Column 1 heading</th>
+        <th>Column 2 heading</th>
+        <th>Column 3 heading</th>
+      </tr>
+      <tr>
+        <td>Row 2, cell 1</td>
+        <td colspan="2">Row 2, cell 2, also spanning Row 2, cell 3</td>
+      </tr>
+      <tr>
+        <td rowspan="2">Row 3, cell 1, also spanning Row 4, cell 1</td>
+        <td>Row 3, cell 2</td>
+        <td>Row 3, cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 4, cell 2</td>
+        <td>Row 4, cell 3</td>
+      </tr>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th colspan="2">Computer Science</th>
+        </tr>
+        <tr>
+          <td>3741255</td>
+          <td>Jones, Martha</td>
+        </tr>
+        <tr>
+          <td>4077830</td>
+          <td>Pierce, Benjamin</td>
+        </tr>
+        <tr>
+          <td>5151701</td>
+          <td>Kirk, James</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="2">Russian Literature</th>
+        </tr>
+        <tr>
+          <td>3971244</td>
+          <td>Nim, Victor</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="2">Astrophysics</th>
+        </tr>
+        <tr>
+          <td>4100332</td>
+          <td>Petrov, Alexandra</td>
+        </tr>
+        <tr>
+          <td>8892377</td>
+          <td>Toyota, Hiroko</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

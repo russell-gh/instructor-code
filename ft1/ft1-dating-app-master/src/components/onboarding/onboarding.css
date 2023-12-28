@@ -1,0 +1,22 @@
+.onBoarding > button {
+  margin-right: 10px;
+  width: 90px;
+  color: black;
+}
+
+.onBoarding {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+  /* background-color: rgb(247, 248, 249); */
+}
+
+.motto {
+  margin-top: 20px;
+}
+
+.onBoardingContainer {
+  border-radius: 10px;
+  border: 1px;
+  background-color: rgb(247, 248, 249);
+}

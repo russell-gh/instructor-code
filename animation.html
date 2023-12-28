@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+  </head>
+  <body>
+    <svg viewBox="-100 -100 200 200">
+      <circle class="triangle" cx="20" cy="20" r="20" />
+      <circle class="triangle" cx="0" cy="0" r="20" />
+    </svg>
+  </body>
+</html>
+
+<script>
+  //   gsap.set(".triangle", { autoAlpha: 0 });
+
+  const animation = gsap.fromTo(
+    ".triangle",
+    { y: -100, fill: "green", visibility: "visible" },
+    {
+      autoAlpha: 1,
+      y: 50,
+      fill: "orange",
+      duration: 5,
+      delay: 1,
+      ease: "elastic.out(1, 0.3)",
+      stagger: 1,
+    }
+  );
+
+  setTimeout(() => animation.kill(), 2000);
+</script>

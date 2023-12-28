@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body></body>
+</html>
+<script>
+  getApiData();
+  async function getApiData() {
+    //
+    //
+    // const result = await axios.get("https://api.spacex.land/rest/rockets");
+    // console.log(result.data);
+
+    var limit = 5;
+
+    const result = await axios.post(
+      "https://spacex-production.up.railway.app/",
+      {
+        query: `
+                { 
+                    rockets   {
+                                            id
+                                            height {
+                                                   feet
+                                                    }
+                                        }
+                }
+            `,
+        variables: { limit },
+      }
+    );
+    console.log(result);
+
+    //
+    //
+  }
+</script>
+<!-- query ($rank: Int = 3){ rockets(limit: $rank) { country } } -->

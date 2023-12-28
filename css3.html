@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        margin: 10px;
+
+        /* text-shadow: 10px 10px 10px black; */
+
+        /* box-shadow: inset -5px 10px 10px 5px red; */
+
+        border: 5px solid red;
+        border-radius: 50px 5px 5px 5px;
+      }
+      div {
+        background: linear-gradient(135deg, rgb(138, 207, 159), blue);
+        width: 200px;
+        height: 200px;
+
+        /* background: radial-gradient(ellipse at top, #e66465, transparent),
+            radial-gradient(ellipse at bottom, #4d9f0c, transparent); */
+
+        /* background-image: conic-gradient(red, orange, yellow, green, blue); */
+
+        /* transform: scale(0.5); */
+        transform: translateY(1%);
+        transform: rotate(50deg);
+        transform: skew(10deg);
+      }
+
+      div:hover {
+        /* transform: scale(1.5); */
+      }
+
+      /* transition */
+      main {
+        background-color: red;
+        color: white;
+        width: 200px;
+        transition: all 4s ease-in-out;
+      }
+
+      main:hover {
+        margin-left: 50px;
+        background-color: green;
+        transform: scale(2);
+      }
+
+      /* animation */
+      /* main {
+        background-color: red;
+        color: white;
+        width: 200px;
+        animation: example 5s infinite;
+      }
+      @keyframes example {
+        50% {
+          background-color: blue;
+        }
+        100% {
+          background-color: yellow;
+        }
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- <h1>I am a H1</h1>
+    <div></div> -->
+    <main>I am a button</main>
+  </body>
+</html>

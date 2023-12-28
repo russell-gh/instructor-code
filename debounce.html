@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 10px;
+      }
+
+      body {
+        font-size: 1.6rem;
+        margin: 0;
+        min-height: 100vh;
+        padding: 15px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        /* You MUST make sure that links stand out from nomal text though...*/
+      }
+
+      /*
+                a:hover,
+                a:focus {
+                  text-decoration: underline;
+                }
+              */
+
+      img {
+        /* This means that it can be less than 100% of the width of its parent IF the image is INTRINSICALLY smaller */
+        max-width: 100%;
+
+        height: auto;
+        /* 'auto' is the initial value for height BUT for images (and other elements which have an intrinic height) that is not the case. To make an image responsive you set one dimension (usually width) to [max-]width: 100%; and the other to 'auto' to ensure it keeps aspect ratio. 'auto' basically tells the browser to decide. */
+        vertical-align: middle;
+        /* minor vertical centering. Works for images IF there is a baseline (i.e. they are displayed inline or inline-block) */
+      }
+
+      /* Because we us <ul>s for lists that we don't always want bulletted. */
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      /* To make actual bulletted lists */
+      ul.typographic {
+        list-style: initial;
+        padding-left: inital;
+      }
+
+      /* For 'accessibility text'. If your button only has an image inside it that isn't good for accessibility. Put a span inside there and give it this class and put some descriptive text for what the button does into the span. */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .sr-only-focusable:active,
+      .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+  </head>
+  <body>
+    <label
+      >(With your console open) Type in here, then wait
+      <span id="delay">0</span> seconds: <input type="text" id="myInput"
+    /></label>
+  </body>
+</html>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("myInput");
+    const delayDisplay = document.getElementById("delay");
+
+    const handler = function (e) {
+      console.log(e.target.value);
+    };
+
+    const DELAY_AFTER_TYPING = 0.5; // seconds
+    delayDisplay.textContent = DELAY_AFTER_TYPING;
+
+    const DELAY_IN_MS = DELAY_AFTER_TYPING * 1000;
+
+    /* https://lodash.com/docs/4.17.15#debounce */
+    const debounced = _.debounce(handler, DELAY_IN_MS, {
+      leading: false,
+      trailing: true,
+    });
+
+    input.addEventListener("input", (e) => debounced(e));
+  });
+</script>

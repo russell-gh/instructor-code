@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      class Vehicle {
+        constructor(color, model) {
+          this.color = color;
+          this.model = model;
+        }
+
+        data = { colour: "none" };
+
+        display() {
+          console.log(
+            `The color is ${this.color}, and the model is ${this.model}`
+          );
+        }
+      }
+
+      class Car extends Vehicle {
+        constructor(color, model) {
+          super(color, model);
+        }
+
+        display() {
+          console.log(
+            `This vehicle is a Car. The color is ${this.color}, and the model is ${this.model}`
+          );
+
+          function this1() {
+            console.log(this);
+          }
+
+          var this2 = (a, b) => {
+            console.log(this);
+          };
+
+          var this3 = function this3() {
+            console.log(this);
+          }.bind(this);
+
+          this1();
+          this2();
+          this3();
+
+          var this1_test = this1.bind(window); //or do not bind this or bind window
+          this1_test();
+
+          var this2_test = this2.bind(window); //or only window
+          this2_test();
+        }
+      }
+
+      class Moto extends Vehicle {
+        constructor(color, model) {
+          super(color, model);
+        }
+
+        display() {
+          console.log(
+            `This vehicle is a Motorcycle. The color is ${this.color}, and the model is ${this.model}`
+          );
+        }
+      }
+
+      let sedan = new Car("Silver", "Honda");
+      let scooter = new Moto("Red", "Vespa");
+
+      sedan.display();
+      scooter.display();
+    </script>
+  </head>
+
+  <body>
+    <h1 id="message">Hello World!</h1>
+    <!-- element to be updated by onceLoaded function -->
+  </body>
+</html>

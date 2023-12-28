@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 15px;
+        counter-reset: question;
+      }
+
+      .questions-list li {
+        margin-bottom: 15px;
+      }
+
+      .question {
+        font-size: 20px;
+      }
+
+      .question::before {
+        counter-increment: question;
+        content: counter(question) ": ";
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .column {
+        background-color: lightblue;
+        width: 33.33%;
+        padding: 15px;
+      }
+
+      ol,
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .race-track {
+        width: 500px;
+        height: 500px;
+        border: 5px solid;
+        margin: auto;
+      }
+      .car {
+        background-color: #f00;
+        width: 50px;
+        height: 50px;
+        animation: racecar 15s linear infinite;
+        background: url(https://www.pngitem.com/pimgs/m/419-4193000_car-icons-above-small-car-icon-from-above.png)
+          no-repeat center/cover;
+      }
+      @keyframes racecar {
+        25% {
+          transform: translate(440px, 0);
+        }
+
+        50% {
+          transform: translate(0, 440px);
+        }
+
+        75% {
+          transform: translate(-440px, 0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ol>
+      <li>
+        <p class="question">1. Why doesn't my car go around the track?</p>
+        <p class="question">2. Make it car go around the track.</p>
+        <p class="question">
+          3. Make it face the correction direction as it goes around the track.
+        </p>
+        <div class="race-track">
+          <div class="car"></div>
+        </div>
+      </li>
+    </ol>
+  </body>
+</html>

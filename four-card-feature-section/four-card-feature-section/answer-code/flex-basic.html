@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <style>
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        background-color: DodgerBlue;
+        align-items: center;
+      }
+
+      .flex-container div {
+        background-color: #f1f1f1;
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      /* ignore this rule, its just so you can see the size of the boxes */
+      .inner {
+        background-color: green !important;
+        width: 180px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="single">Card one goes here</div>
+      <div>
+        <div class="inner">Card 2 goes here</div>
+        <div class="inner">Card 3 goes here</div>
+      </div>
+      <div class="single">Card four goes here</div>
+    </div>
+  </body>
+</html>

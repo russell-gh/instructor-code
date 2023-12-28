@@ -1,0 +1,33 @@
+.testimonialBox {
+  width: 100%;
+  /* background-color: #facf41; */
+  color: #fff;
+  /* margin-top: 50px; */
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+
+  /* box-shadow: 0 0 30px #aaa; */
+  /* text-shadow: 1px 1px 2px #555; */
+  /* background-color: #ddaa0080;
+  box-shadow: 0 0 55px #fff5 inset; */
+  background-color: rgb(240, 186, 37);
+
+  /* border-radius: 5px; */
+}
+
+.testimonialBox div {
+  padding: 5px;
+}
+
+.testimonialBox h3 {
+  font-style: normal;
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media (min-width: 700px) {
+  .testimonialBox div {
+    padding: 5px 20px 15px;
+  }
+}

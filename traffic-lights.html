@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .outer {
+        width: 20%;
+        margin: 5vh auto 0;
+        border: 1px solid #000;
+        padding: 2.5vw;
+        z-index: 200;
+        border-radius: 5px;
+      }
+
+      .inner {
+        background-color: #000;
+        padding: 2.5vw;
+        border-radius: 5px;
+      }
+
+      .light {
+        background-color: #ccc;
+        width: 10vw;
+        height: 10vw;
+        margin-bottom: 10px;
+        border-radius: 50%;
+      }
+
+      .light:last-child {
+        margin-bottom: 0;
+      }
+
+      .stop.on {
+        background-color: #f00;
+      }
+
+      .caution.on {
+        background-color: #ff0;
+      }
+
+      .go.on {
+        background-color: #0f0;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #eee;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      footer button {
+        background-color: #eee;
+        padding: 15px;
+        border-radius: 5px;
+        margin-inline-end: 5px;
+      }
+
+      button.stop {
+        background-color: red;
+        color: white;
+      }
+
+      button.caution {
+        background-color: yellow;
+      }
+
+      button.go {
+        background-color: green;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <div class="light stop"></div>
+        <div class="light caution"></div>
+        <div class="light go"></div>
+      </div>
+    </div>
+
+    <footer>
+      <button class="stop">Stop</button>
+      <button class="caution">Caution</button>
+      <button class="go">Go</button>
+      <button class="auto stop">Auto Stop</button>
+      <button class="auto go">Auto Go</button>
+      <button class="reset">Reset</button>
+    </footer>
+  </body>
+</html>
+<script>
+  const lights = document.querySelectorAll(".light");
+
+  const stopButton = document.querySelector("button.stop");
+  const cautionButton = document.querySelector("button.caution");
+  const goButton = document.querySelector("button.go");
+
+  const stopLight = document.querySelector(".light.stop");
+  const cautionLight = document.querySelector(".light.caution");
+  const goLight = document.querySelector(".light.go");
+
+  function turnAllOff(lights) {
+    for (const light of lights) {
+      light.classList.remove("on");
+    }
+  }
+
+  function turnAllOffExcept(item) {
+    for (const light of lights) {
+      light === item ? light.classList.add("on") : light.classList.remove("on");
+    }
+  }
+
+  stopButton.addEventListener("click", function () {
+    turnAllOffExcept(stopLight);
+    // stopLight.classList.add("on");
+  });
+
+  cautionButton.addEventListener("click", function () {
+    turnAllOffExcept(cautionLight);
+    // cautionLight.classList.add("on");
+  });
+
+  goButton.addEventListener("click", function () {
+    turnAllOffExcept(goLight);
+    // goLight.classList.add("on");
+  });
+
+  //sequence
+  let i = 0;
+  const sequence = [stopLight, cautionLight, goLight];
+  setInterval(() => {
+    turnAllOffExcept(sequence[i]);
+    i++;
+  }, 1000);
+</script>

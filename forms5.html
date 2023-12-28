@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/joi-browser@13.4.0/dist/joi-browser.min.js"></script>
+  </head>
+  <body>
+    <label for="">Email:</label>
+    <input id="email" type="text" />
+  </body>
+</html>
+<script>
+  // var stringSchema = Joi.number().min(10).max(30).email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } });
+  var stringSchema = Joi.string()
+    .min(10)
+    .max(30)
+    .email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } });
+  ////.required()
+  //.email({ minDomainSegments: 2, tlds: { allow: ["com", "net"] } });
+
+  document.addEventListener("input", (e) => {
+    Joi.validate(e.target.value, stringSchema, function (error, val) {
+      console.log(error, val);
+    });
+  });
+</script>

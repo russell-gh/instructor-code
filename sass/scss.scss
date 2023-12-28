@@ -1,0 +1,18 @@
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.help {
+  @extend %message-shared;
+  background-color: green;
+
+  & .dodge {
+    text-decoration: underline;
+  }
+}

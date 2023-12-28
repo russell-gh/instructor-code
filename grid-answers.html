@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Presentational CSS - ignore but don't change */
+      :root {
+        --numberofquestions: 14;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: 10px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        padding: 50px 15px;
+        background-color: #005080;
+        font-size: 1.6rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0;
+      }
+
+      h1 {
+        color: darkorange;
+        text-shadow: 2px 2px 5px #000;
+      }
+
+      main {
+        display: flex;
+        flex-flow: column;
+        height: calc(500px * var(--numberofquestions));
+      }
+
+      section {
+        border-radius: 15px;
+        flex: 1 0 auto;
+        margin-bottom: 50px;
+        padding: 15px;
+        color: white;
+        box-shadow: inset 5px 5px 10px #000;
+      }
+
+      section h2 {
+        text-decoration: underline;
+      }
+
+      section [class^="grid"] {
+        border: 3px dashed #f00;
+      }
+
+      section [class^="grid"] > * {
+        background-color: yellow;
+        color: #000;
+        border: 3px dashed #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+      }
+
+      /* END OF Presentational CSS */
+
+      /* NOTE in the HTML the grid for each question has a class of 'grid$', where $ is the question number...
+
+You'll have to put the relevant items in yourself
+
+/* Q1. Make your grid have 3 columns of 200px and 2 rows of 100px. Use the repeat function to do the columns. */
+
+      .grid1 {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: 100px 100px;
+      }
+
+      /* Q2. Do the same as Q1 (not the repeat bit!) but make the middle column take up remaining space */
+
+      .grid2 {
+        display: grid;
+        grid-template-columns: 200px auto 200px;
+        grid-template-rows: 200px 200px;
+      }
+
+      /* Q3. Do the same as Q1 but make all the columns flexible, but the middle column take up 3 times as much space as the other two. */
+
+      .grid3 {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 200px 200px;
+      }
+
+      /* Q4. Do the same as Q3 but make the middle column grow, whilst the other two collapse to the size of their content. */
+
+      .grid4 {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: 200px 200px;
+      }
+
+      /* Q5. Do the same as Q3 but add a gap of 10px between the columns. Then, commented out, show how you would create the same gap between the rows. KEEP THE ROW & COLUMN GAP FOR THE REST OF THE EXAMPLES */
+
+      .grid5 {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 200px 200px;
+        grid-column-gap: 10px;
+        /*   grid-row-gap: 10px; */
+      }
+
+      /* Q6. Set the grid's width to 216px. Set it to have 2 rows and 2 columns (both at 100px each). Change the widths and heights on those items in the implicit grid to match the width of those in the explicit grid.*/
+
+      .grid6 {
+        display: grid;
+        width: 216px;
+        /*   grid-auto-flow: column; */
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 100px 100px;
+        grid-row-gap: 10px;
+        grid-column-gap: 10px;
+        grid-auto-columns: 100px;
+        grid-auto-rows: 100px;
+      }
+
+      /* Q7. Create a grid with 3 columns, the outer two go between 100px and 200px, and the inner being 200px and upwards */
+
+      .grid7 {
+        display: grid;
+        grid-template-columns: minmax(100px, 200px) minmax(200px, 1fr) minmax(
+            100px,
+            200px
+          );
+        grid-template-rows: 100px 100px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+
+      /* Q8. Set the grid to have 3 columns: 1. The minimum size of the content; 2. the maximum size of the content, and; 3. allows up to 200px of space for the content  */
+
+      .grid8 {
+        display: grid;
+        grid-template-columns: min-content max-content fit-content(200px);
+        grid-template-rows: auto auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+      }
+
+      /* Q9. Create a 4 by 4 grid, all of 1fr. Put 4 items in it and make the first and the last item span all the columns. Make the second span 2 columns but start AFTER the first column (which will therefore be empty). Make item 2 span 2 rows.
+
+Commented out below that, show how you would make it so that it would stay the same even if another column was inserted  */
+
+      .grid9 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+
+      .grid9 > *:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        /*   grid-column-end: -1; */
+      }
+
+      .grid9 > *:nth-child(2) {
+        /* grid-column-start: 2;
+        grid-column-end: span 2;
+        grid-row-end: span 2; */
+        /* grid-column-end: -2; */
+        grid-area: 2 / 2 / span 2 / -2;
+      }
+
+      .grid9 > *:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        /*   grid-column-end: -1; */
+      }
+
+      /* Q10. Define a grid with the column lines 'page-start', ('content-start' and 'ad-start'), 'ad-end', 'content-end' and 'page-end'; create grid row lines for 'page-start', 'content-start', 'content-end' and 'page-end'; make the height of rows a minimum of 100px and a maximum of auto.  
+
+Make item 1 run from content-start to page-end (columns and rows).
+ */
+
+      .grid10 {
+        display: grid;
+        grid-template-columns: [page-start] 1fr [content-start ad-start] 1fr [ad-end] 1fr [content-end] 1fr [page-end];
+        grid-template-rows:
+          [page-start] minmax(100px, auto) [content-start] minmax(100px, auto)
+          [content-end] minmax(100px, auto) [page-end];
+      }
+
+      .grid10 > *:nth-child(1) {
+        grid-column-start: content-start;
+        grid-column-end: page-end;
+        grid-row-start: content-start;
+        grid-row-end: page-end;
+      }
+
+      /* Q11. Create a 4 x 4 grid (1fr gap) and define 4 areas (top-left, top-right, bottom-left, bottom-right) which span 2 rows and 2 columns each. Put the items in each area but revese the corners. */
+
+      .grid11 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-template-areas:
+          "top-left top-left top-right top-right"
+          "top-left top-left top-right top-right"
+          "bottom-left bottom-left bottom-right bottom-right"
+          "bottom-left bottom-left bottom-right bottom-right";
+      }
+
+      .grid11 > *:nth-child(1) {
+        grid-area: bottom-right;
+      }
+
+      .grid11 > *:nth-child(2) {
+        grid-area: bottom-left;
+      }
+
+      .grid11 > *:nth-child(3) {
+        grid-area: top-right;
+      }
+
+      .grid11 > *:nth-child(4) {
+        grid-area: top-left;
+      }
+
+      /* Q12. Make the grid 600px high. Create a 4 x 4 grid (100px wide columns and rows). Align the grid content to the bottom right; In their grid cells, align the item content to the top left. Every second item should stretch the full height and width of their cell; Every third should be centered in the cell */
+
+      .grid12 {
+        display: grid;
+        height: 600px;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(4, 100px);
+        grid-gap: 10px;
+        justify-content: end;
+        align-content: end;
+        align-items: start;
+        justify-items: start;
+      }
+
+      .grid12 > *:nth-child(2n) {
+        align-self: stretch;
+        justify-self: stretch;
+      }
+
+      .grid12 > *:nth-child(3n) {
+        align-self: center;
+        justify-self: center;
+      }
+
+      /* Q13. Create a 4 x 4 grid (1fr track). Make every 3rd item span 3 columns and every 5th span 4 columns. Set a property that makes the spaces in the grid get filled in where possible. */
+
+      .grid13 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-auto-flow: row dense;
+      }
+
+      .grid13 > *:nth-child(3n) {
+        grid-column-end: span 3;
+      }
+
+      .grid13 > *:nth-child(5n) {
+        grid-column-end: span 4;
+      }
+
+      /* Q14. Create a 4 x 4 grid (no gaps, track width 1fr). Make the items start at 1,1; 2,2 and; 3,3 and span 2 rows and 2 columns. Bring the first item to the front of the stack and the third to the back. */
+
+      .grid14 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+
+      .grid14 > *:nth-child(1) {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+        z-index: 2;
+      }
+
+      .grid14 > *:nth-child(2) {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+
+      .grid14 > *:nth-child(3) {
+        grid-row-start: 3;
+        grid-column-start: 3;
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+        z-index: -1;
+      }
+
+      /* Q15. Align the odd children to the end and justify them to the center*/
+      .grid15 {
+        display: grid;
+        align-items: start;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(4, 100px);
+      }
+
+      .grid15 div {
+        height: 50px;
+      }
+
+      .grid15 div:nth-child(odd) {
+        align-self: end;
+        justify-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Grid Homework</h1>
+      <p><strong>Fork this pen</strong> then send me the link to it...</p>
+    </header>
+    <main>
+      <section>
+        <h2>Question 1: Fixed-width Grid</h2>
+        <div class="grid1">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 2: Relative width column</h2>
+        <div class="grid2">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 3: Fractional Widths</h2>
+        <div class="grid3">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 4: Fluid columns, with growth</h2>
+        <div class="grid4">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 5: Grid Gap</h2>
+        <div class="grid5">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 6: Implicit grid creation &amp; sizing</h2>
+        <div class="grid6">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 7: Sizing with boundaries</h2>
+        <div class="grid7">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 8: Sizing to content</h2>
+        <div class="grid8">
+          <div>Mary had a little lamb</div>
+          <div>Mary had a little lamb</div>
+          <div>Mary had a little lamb</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 9: Placing and spanning</h2>
+        <div class="grid9">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 10: Defining and use of Grid Lines</h2>
+        <div class="grid10">
+          <div>1</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 11: Defining and use of Grid Areas</h2>
+        <div class="grid11">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 12: Rules for item alignment</h2>
+        <div class="grid12">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+          <div>11</div>
+          <div>12</div>
+          <div>13</div>
+          <div>14</div>
+          <div>15</div>
+          <div>16</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 13: Tessalation</h2>
+        <div class="grid13">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+          <div>11</div>
+          <div>12</div>
+          <div>13</div>
+          <div>14</div>
+          <div>15</div>
+          <div>16</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 14: Stacking</h2>
+        <div class="grid14">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </section>
+      <section>
+        <h2>Question 15: Item Control</h2>
+        <div class="grid15">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+          <div>10</div>
+          <div>11</div>
+          <div>12</div>
+          <div>13</div>
+          <div>14</div>
+          <div>15</div>
+          <div>16</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

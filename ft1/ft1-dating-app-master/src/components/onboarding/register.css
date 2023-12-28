@@ -1,0 +1,106 @@
+.containerReg {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  min-height: 40vh;
+}
+
+.submit {
+  width: 40vw;
+  display: block;
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 13px;
+}
+
+select {
+  margin: 0px 5px;
+}
+
+.btn btn-success {
+  float: right;
+}
+
+.backButton {
+  float: left;
+  display: block;
+}
+
+.registerButton {
+  width: 30vw;
+  display: block;
+  margin: auto;
+}
+
+nav {
+  margin-top: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.errorMessage {
+  font-style: italic;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.errorMessage1 {
+  font-style: italic;
+  font-size: 11px;
+  font-weight: 500;
+  max-width: 250px;
+  margin-top: 5px;
+  margin-left: 40px;
+}
+
+.webcam {
+  display: block;
+  margin: auto;
+}
+
+.selfieContainer {
+  position: relative;
+}
+
+.selfie {
+  position: absolute;
+  top: 0;
+}
+
+.selfieBtn {
+  display: block;
+  margin: auto;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.camera_permissions {
+  position: absolute;
+  /* font-style: italic; */
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(215, 46, 61);
+}
+
+.form {
+  margin: 0 5px;
+}
+
+.motto {
+  text-align: center;
+}

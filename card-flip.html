@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh;
+      }
+
+      .scene {
+        width: 200px;
+        height: 260px;
+        border: 1px solid #ccc;
+        margin: 40px 0;
+        perspective: 600px;
+      }
+
+      .card {
+        width: 100%;
+        height: 100%;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+        /*     transform-origin: top left; */
+        cursor: pointer;
+        position: relative;
+
+        transform: rotateY(25deg);
+      }
+
+      /* .card.is-flipped-x {
+        transform: rotateX(180deg);
+      }
+
+      .card.is-flipped-y {
+        transform: rotateY(180deg);
+      }
+
+      .card.is-flipped-z {
+        transform: rotateZ(180deg);
+      } */
+
+      .card__face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        line-height: 260px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 40px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .card__face--front {
+        background: red;
+      }
+
+      .card__face--back {
+        background: blue;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="scene scene--card">
+        <div class="card">
+          <div class="card__face card__face--front">front</div>
+          <div class="card__face card__face--back">back</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

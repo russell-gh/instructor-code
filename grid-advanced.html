@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* part 5 */
+      /* div {
+        min-width: 100px;
+        height: 100px;
+      }
+      .cell1,
+      .cell3,
+      .cell5,
+      .cell7,
+      .cell9 {
+        background-color: cadetblue;
+      }
+      .cell2,
+      .cell4,
+      .cell6,
+      .cell8 {
+        background-color: chocolate;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+          "header header header"
+          "main main main"
+          "footer footer footer";
+        gap: 10px;
+      }
+
+      .cell1 {
+        grid-area: main;
+      } */
+
+      /* part 6 */
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      .cell1,
+      .cell3,
+      .cell5,
+      .cell7,
+      .cell9 {
+        background-color: cadetblue;
+      }
+      .cell2,
+      .cell4,
+      .cell6,
+      .cell8 {
+        background-color: chocolate;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-auto-rows: minmax(200px, 300px);
+        grid-template-areas:
+          "header header header"
+          "main main main"
+          "footer footer footer";
+        gap: 10px;
+        /* align-items: end; */
+        /* justify-content: center; */
+      }
+
+      .cell1 {
+        align-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="cell1">1</div>
+      <div class="cell2">2</div>
+      <div class="cell3">3</div>
+      <div class="cell4">4</div>
+      <div class="cell5">5</div>
+      <div class="cell6">6</div>
+      <div class="cell7">7</div>
+      <div class="cell8">8</div>
+      <div class="cell9">9</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search {
+  justify-content: center;
+  padding: 20px 0px;
+  background-color: #daeaf6;
+  margin: 5px 0px;
+}
+.search .searchButtons {
+  text-align: center;
+}
+.search button,
+.search h2,
+.search p {
+  margin: 5px;
+  font-size: 15px;
+  border: none;
+  text-align: center;
+}
+.search span {
+  font-weight: 500;
+}
+.search #demo {
+  font-weight: 700;
+  overflow: visible;
+  cursor: pointer;
+}/*# sourceMappingURL=search.css.map */

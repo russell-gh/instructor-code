@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Star Jedi";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./StarJedi.woff");
+}
+
+/* Ana's CSS */
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.hide-element {
+  display: none;
+}
+
+.search {
+  width: 100%;
+  font-weight: bold;
+}
+
+.heart {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.fa-heart-broken {
+  color: red;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.form span {
+  color: red;
+}
+
+.form-group {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.submit {
+  width: 100%;
+}
+
+.headerTitle {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  font-family: "Star Jedi";
+}
+
+.fa-heart {
+  color: red;
+}
+
+@font-face {
+  font-family: "Star Jedi";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./StarJedi.woff");
+}
+
+h5 {
+  font-family: "Star Jedi";
+}
+
+label {
+  font-family: "Star Jedi";
+}
+
+.wideButtonContainer {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+.wide-btn {
+  width: 100%;
+}
+
+span.jedi {
+  font-family: "Star Jedi";
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  margin: 2px;
+}

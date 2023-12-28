@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const myDate = new Date();
+  console.log(myDate);
+
+  var today = new Date().toLocaleDateString(
+    "fr-FR", // locale or en-GB
+
+    {
+      // options
+
+      day: "numeric",
+
+      month: "short",
+
+      year: "numeric",
+    }
+  );
+
+  console.log(today);
+</script>

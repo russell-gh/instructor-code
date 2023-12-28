@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  //   const str1 = "Saturday night plans";
+
+  //   console.log(str1.startsWith("Sat"));
+  //   // expected output: true
+
+  //   console.log(str1.startsWith("Sat", 3));
+  //   // expected output: false
+
+  //   // /<pattern>/<flags>
+  //   const regex1 = /abc/gi;
+
+  // new RexExp(<pattern>, <flags>)
+  // const regex2 = new RegExp("abc", "gi");
+
+  // dynamically (You can't set flags using es6
+  // template strings, so...)
+  //   const searchTerm = "cat";
+  //   const flags = "gi";
+  //   const regex3 = new RexExp(searchTerm, flags);
+
+  //   console.log(regex2.source);
+
+  //   console.log(regex2.test("abc"));
+
+  // const myStr = "def-abc   abc";
+
+  // const result = myStr.match(regex2);
+
+  // console.log(result);
+
+  const r = /(?<date>\d{1,2}) (?<month>\w{3,}) (?<year>\d{4})/gi;
+
+  console.log(r.exec("16 August 2021")[3]);
+</script>

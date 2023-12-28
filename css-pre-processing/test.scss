@@ -1,0 +1,7 @@
+@mixin example($color) {
+  color: #{"dark" + $color};
+}
+
+.div {
+  @include example(green);
+}

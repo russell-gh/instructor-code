@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .scrollable {
+          overflow:scroll
+      }
+      .container {
+        display: flex;
+        height: 600px;
+        width: 3000px;
+        background-color: grey;
+      }
+      .card {
+        width: 99vw;
+        height: 500px;
+        background-color: red;
+      }
+      @media (min-width: 700px) {
+        .card {
+          width: 49.5vw !important;
+        }
+      }
+      @media (min-width: 1000px) {
+        .card {
+          width: 32.75vw !important;
+        }
+      }
+      @media (min-width: 1300px) {
+        .card {
+          width: 24.99vw !important;
+        }
+      }
+
+      /* ignore just for visual clarity */
+      .card:not(:first-child) {
+        border-left: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scrollable">
+      <div class="container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+    </div>
+</div>
+  </body>
+</html>

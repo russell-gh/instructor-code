@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: basic-server
+  labels:
+    app: web
+spec:
+  containers:
+    - name: front-end
+      image: demo:0.0.4
+      imagePullPolicy: Never # stops it pulling from remote
+      ports:
+        - containerPort: 80
+  # imagePullSecrets:
+  #   - name: regcred

@@ -1,0 +1,12 @@
+body {
+  padding: 50px;
+}
+
+.character {
+  display: flex;
+  width: 800px;
+}
+
+img {
+  width: 100px;
+}

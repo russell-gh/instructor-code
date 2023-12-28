@@ -1,0 +1,58 @@
+@media (min-width: 700px) {
+  div.outerGutters {
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: 0 0 40px #ccc;
+    min-height: 100vh;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p.menuIcon {
+    display: none;
+  }
+  nav.dropDown {
+    display: none;
+  }
+  nav.topNav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  nav.topNav .link {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    color: var(--corn);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: 0.5s;
+    padding: 5px 15px;
+  }
+  nav.topNav .link:hover {
+    background-color: var(--corn);
+    color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  ul.priceList {
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.8rem;
+  }
+
+  ul.priceList li {
+    background-color: #ddaa0040;
+  }
+
+  ul.priceList li.wide1 {
+    background-color: #ddaa0060;
+  }
+}

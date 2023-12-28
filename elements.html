@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="./myModuleMain.js"></script>
+  </head>
+  <body>
+    <div id="myClass"></div>
+    <label for="">Enter Email:</label><input id="email" type="text" />
+  </body>
+</html>
+
+<script>
+  //   history.back();
+  //   history.forwards();
+  //   history.go(2);
+
+  //   localStorage.setItem("myItem", "Some stored data");
+  const item = localStorage.getItem("myItem");
+  console.log(item);
+  document.getElementById("email").value = item;
+
+  //navigator
+
+  //   let tag = document.createElement("p");
+  //   let text = document.createTextNode("Some random text");
+  //   tag.appendChild(text);
+  //   document.getElementById("myClass").appendChild(tag);
+
+  //events
+</script>

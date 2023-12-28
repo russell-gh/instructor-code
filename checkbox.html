@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .visually-hidden {
+        position: absolute;
+        left: -100vw;
+      }
+
+      label {
+        background: #7a05e1;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        color: white;
+      }
+
+      /* #toggle:hover ~ .control-me::after,
+      #toggle:focus-within ~ .control-me::after {
+        content: "Clicked";
+        font-size: 100px;
+      } */
+
+      .control-me::after {
+        content: "Clicked";
+        font-size: 100px;
+      }
+
+      #toggle:checked ~ .control-me::after {
+        content: "Not Clicked";
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="toggle">Toggle</label>
+
+      <input type="checkbox" id="toggle" class="visually-hidden" />
+
+      <div class="control-me"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcel Demo</title>
+  <link rel="stylesheet" href="42c381b7d68fb0787e65882f7c4d69a3">
+</head>
+
+<body>
+  <!-- <h1>Parcel Demo</h1> -->
+
+  <div id="root"></div>
+  <script src="274241a5d8474da7a0a2f89863f03f21"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Select your shipping country</p>
+
+        <select name="mySelect" id="mySelect">
+        </select>
+
+        <button onclick="changeOrder()">Reverse order</button>
+        <button onclick="sortAlpha()">Sort order</button>
+
+</body>
+</html>
+
+<script>
+
+    console.log(globalThis, window);
+
+    (function () {
+        console.log('I am anonymous');
+    })();
+
+    var countries = ['France', 'Germany', 'United Kingdom', 'Zimbabwe'];
+
+    if (navigator.language.includes("en")) {
+            var index = countries.indexOf("United Kingdom");
+            countries.splice(index, 1);
+            countries.unshift('United Kingdom');
+    }
+
+    addCountries();
+
+    checkCountries();
+
+    function checkCountries() {
+        if (navigator.language.includes('en')) {
+            alert('Sorry, we do not ship to your country');
+        }
+    }
+
+    function changeOrder() {
+
+        countries.reverse();
+        addCountries();
+
+    }
+
+    function sortAlpha() {
+
+        countries.sort();
+        addCountries();
+
+    }
+    
+    function addCountries() {
+
+        var element = document.getElementById("mySelect");
+
+        document.getElementById("mySelect").innerHTML = '';
+
+        countries.forEach(function (item) {
+
+            var option = document.createElement("option");
+            option.text = item;
+            element.add(option);
+
+        });
+
+    }
+    
+</script>

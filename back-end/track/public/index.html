@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading</title>
+
+    <script>
+      var params = {};
+      location.search
+        .substr(1)
+        .split("&")
+        .forEach((element) => {
+          params[element.split("=")[0]] = element.split("=")[1];
+        });
+
+      const body = {
+        location: window.location,
+        navigatorAppCodeName: window.navigator.appCodeName,
+        navigatorAppVersion: window.navigator.appVersion,
+        navigatorLanguage: window.navigator.language,
+        navigatorLanguages: window.navigator.languages,
+        navigatorUserAgent: window.navigator.userAgent,
+        screenWidth: window.screen.width,
+        screenHeight: window.screen.height,
+        id: params.id,
+      };
+
+      const url = window.location.origin + "/url";
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(body),
+      })
+        .then(function (data) {
+          window.location.replace(params.r);
+        })
+        .catch(function (error) {});
+    </script>
+  </head>
+  <body>
+    <p>Loading</p>
+  </body>
+</html>

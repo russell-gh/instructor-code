@@ -1,0 +1,98 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: red;
+}
+
+@mixin demo {
+  display: inline-block;
+  background-color: aqua;
+}
+
+div {
+  @include demo;
+}
+
+//
+
+@mixin super-demo {
+  @include demo;
+
+  p {
+    font-size: x-large;
+  }
+
+  //or without p for all tags
+}
+
+div {
+  @include super-demo;
+}
+
+//
+@mixin i-can-be-configured($property) {
+  #{$property}: #ff0000;
+}
+
+div {
+  @include i-can-be-configured(background-color);
+}
+
+//
+$themeWhite: #f4f4f4;
+div {
+  background-color: $themeWhite;
+}
+
+//
+ul {
+  color: blue;
+
+  li {
+    padding: 10px;
+
+    ul {
+      display: none;
+
+      &:hover,
+      &:focus {
+        color: green;
+      }
+    }
+  }
+}
+
+//
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+}

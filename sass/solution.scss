@@ -1,0 +1,92 @@
+:root {
+  --maintextcolor: #333;
+}
+
+@ standard-text {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+}
+
+@mixin border($color) {
+  border-color: ($color);
+  border-radius: 10;
+}
+
+@mixin box($background-color, $box-shadow, $color) {
+  background: #{$background-color};
+  -webkit-box-shadow: 0 0 1px #{$box-shadow};
+  box-shadow: 0 0 1px #{$box-shadow};
+  color: #{$color};
+}
+
+%container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: var(--maintextcolor);
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: var(--maintextcolor);
+}
+
+nav ul {
+  @include standard-text;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--maintextcolor);
+
+  li {
+    @include standard-text;
+    display: inline-block;
+
+    a {
+      @include standard-text;
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: green;
+      }
+    }
+  }
+}
+
+.info {
+  @include standard-text;
+  @include box(darkgrey, rgba(169, 169, 169, 0.25), #fff);
+}
+
+.alert {
+  @include standard-text;
+  @include box(darkred, rgba(139, 0, 0, 0.25), #fff);
+}
+
+.success {
+  @include standard-text;
+  @extend %container;
+  @include box(darkgreen, rgba(0, 100, 0, 0.25), #fff);
+}
+
+.message {
+  @extend %container;
+}
+
+.success {
+  @include border(green);
+}
+
+.error {
+  @extend %container;
+  @include border(red);
+}
+
+.warning {
+  @extend %container;
+  @include border(yellow);
+}

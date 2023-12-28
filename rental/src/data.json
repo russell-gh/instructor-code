@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Cartier Santos White",
+    "available": true,
+    "pictures": ["santos-white.webp"],
+    "prices": { "weekly": 165 }
+  },
+  {
+    "id": 2,
+    "name": "Cartier Santos Blue",
+    "available": true,
+    "pictures": ["santos-blue.webp"],
+    "prices": { "weekly": 165 }
+  },
+  {
+    "id": 3,
+    "name": "Cartier Santos Black",
+    "available": true,
+    "pictures": ["santos-black.webp"],
+    "prices": { "weekly": 205 }
+  },
+  {
+    "id": 4,
+    "name": "Cartier Santos ADLC",
+    "available": true,
+    "pictures": ["santos-grey.webp"],
+    "prices": { "weekly": 195 }
+  },
+  {
+    "id": 5,
+    "name": "Panerai 1313",
+    "available": true,
+    "pictures": ["panerai-1313.webp"],
+    "prices": { "weekly": 155 }
+  },
+
+  {
+    "id": 7,
+    "name": "Panerai 1314",
+    "available": true,
+    "pictures": ["panerai-1314.webp"],
+    "prices": { "weekly": 235 }
+  },
+  {
+    "id": 8,
+    "name": "Panerai 1316",
+    "available": true,
+    "pictures": ["panerai-1316.webp"],
+    "prices": { "weekly": 225 }
+  },
+  {
+    "id": 9,
+    "name": "U-Boat DarkMoon Red",
+    "available": true,
+    "pictures": ["uboat-red.png"],
+    "prices": { "weekly": 40 }
+  },
+  {
+    "id": 10,
+    "name": "Omega MoonSwatch Mars",
+    "available": true,
+    "pictures": ["omega-moonswatch-red.avif"],
+    "prices": { "weekly": 17 }
+  }
+]

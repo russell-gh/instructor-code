@@ -1,0 +1,95 @@
+body {
+  background-color: hsl(13.33, 36%, 95.1%);
+  font-family: Garamond;
+}
+
+header {
+  padding: 1% 0 1% 0;
+  background-color: hsl(192.86, 36.84%, 85.1%);
+  text-align: center;
+  font-weight: 500;
+  font-size: xx-large;
+}
+
+nav {
+  padding: 1.5%;
+  margin-bottom: 7%;
+  background-color: hsl(15, 50%, 98.43%);
+}
+
+.socialIcons i:hover {
+  color: hsl(207.47, 82.18%, 60.39%);
+}
+
+.socialIcons i {
+  transition: 0.2s;
+}
+
+.socialIcons {
+  float: right;
+  width: 10%;
+  height: 5%;
+}
+
+.profilePic {
+  display: block;
+  float: left;
+  width: 20%;
+  padding: 2% 5% 2% 10%;
+}
+
+.introduction {
+  padding: 2% 10% 5% 10%;
+  font-weight: 300;
+  font-size: x-large;
+  line-height: 1.6;
+}
+
+.introduction > h2 {
+  text-align: center;
+}
+
+.certificates {
+  padding: 2% 5% 2% 2%;
+  background-color: hsl(15, 50%, 98.43%);
+  margin: 2% 5% 2% 10%;
+}
+
+.nottingHill {
+  padding: 2% 5% 2% 2%;
+  background-color: hsl(15, 50%, 98.43%);
+  margin: 2% 5% 2% 10%;
+}
+
+.clarion {
+  padding: 2% 5% 2% 2%;
+  background-color: hsl(15, 50%, 98.43%);
+  margin: 2% 5% 2% 10%;
+}
+
+.atkinsGlobal {
+  padding: 2% 5% 2% 2%;
+  background-color: hsl(15, 50%, 98.43%);
+  margin: 2% 5% 2% 10%;
+}
+
+.rbs {
+  padding: 2% 5% 2% 2%;
+  background-color: hsl(15, 50%, 98.43%);
+  margin: 2% 5% 2% 10%;
+}
+
+.footer {
+  background-color: hsl(192.86, 36.84%, 85.1%);
+}
+
+h3 > span {
+  color: hsl(207.47, 82.18%, 60.39%);
+}
+
+main > section > p,
+ul {
+  font-size: large;
+  font-weight: 400;
+  line-height: 1.6;
+}

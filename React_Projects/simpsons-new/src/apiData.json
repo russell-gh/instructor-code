@@ -1,0 +1,62 @@
+[
+  {
+    "quote": "All I'm gonna use this bed for is sleeping, eating and maybe building a little fort.",
+    "character": "Homer Simpson",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FHomerSimpson.png?1497567511939",
+    "characterDirection": "Right"
+  },
+  {
+    "quote": "Hello, Simpson. I'm riding the bus today becuase Mother hid my car keys to punish me for talking to a woman on the phone. She was right to do it.",
+    "character": "Principal Skinner",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FSeymourSkinner.png?1497567511460",
+    "characterDirection": "Right"
+  },
+  {
+    "quote": "I live in a single room above a bowling alley...and below another bowling alley.",
+    "character": "Frank Grimes",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FFrankGrimes.png?1497567511887",
+    "characterDirection": "Left"
+  },
+  {
+    "quote": "Why are you pleople avoiding me? Does my withered face remind you of the grim specter of death?",
+    "character": "Abe Simpson",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FAbrahamSimpson.png?1497567511593",
+    "characterDirection": "Right"
+  },
+  {
+    "quote": "Oh boy, sleep! That's where I'm a viking!",
+    "character": "Ralph Wiggum",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FRalphWiggum.png?1497567511523",
+    "characterDirection": "Left"
+  },
+  {
+    "quote": "I'm sleeping in the bath tub.",
+    "character": "Marge Simpson",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FMargeSimpson.png?1497567512205",
+    "characterDirection": "Right"
+  },
+  {
+    "quote": "Oh Yeah!",
+    "character": "Duffman",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FDuffman.png?1497567511709",
+    "characterDirection": "Left"
+  },
+  {
+    "quote": "Marriage is like a coffin and each kid is another nail.",
+    "character": "Homer Simpson",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FHomerSimpson.png?1497567511939",
+    "characterDirection": "Right"
+  },
+  {
+    "quote": "I don't want to sound like a killjoy, but becuase this is not to my taste I don't think anyone else should be allowed to enjoy it.",
+    "character": "Marge Simpson",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FMargeSimpson.png?1497567512205",
+    "characterDirection": "Right"
+  },
+  {
+    "quote": "I believe the children are the future... Unless we stop them now!",
+    "character": "Homer Simpson",
+    "image": "https://cdn.glitch.com/3c3ffadc-3406-4440-bb95-d40ec8fcde72%2FHomerSimpson.png?1497567511939",
+    "characterDirection": "Right"
+  }
+]

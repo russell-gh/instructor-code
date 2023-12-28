@@ -1,0 +1,85 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+nav ul {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #333;
+}
+nav ul li {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+  display: inline-block;
+}
+nav ul a {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+nav ul a:hover, nav ul a:focus {
+  color: green;
+}
+
+.info {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+  background: DarkGray;
+  box-shadow: 0 0 1px rgba(169, 169, 169, 0.25);
+  color: #fff;
+}
+
+.alert {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+  background: DarkRed;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #fff;
+}
+
+.success {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+  background: DarkGreen;
+  box-shadow: 0 0 1px rgba(0, 100, 0, 0.25);
+  color: #fff;
+}
+
+.warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+  border-radius: 10;
+}
+
+.error {
+  border-color: red;
+  border-radius: 10;
+}
+
+.warning {
+  border-color: yellow;
+  border-radius: 10;
+}/*# sourceMappingURL=task.css.map */

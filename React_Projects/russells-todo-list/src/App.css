@@ -1,0 +1,21 @@
+.todo {
+  background-color: gold;
+  margin: 2vw;
+  padding: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls,
+.title {
+  margin: 2vw;
+}
+
+.icon {
+  width: 5vw;
+  padding: 2vw;
+}
+
+.title {
+  flex-grow: 10;
+}

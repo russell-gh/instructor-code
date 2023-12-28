@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  font-size: 15px;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -- HEADER LAYOUT START-- */
+
+header {
+  margin: 70px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header p {
+  width: 300px;
+}
+/* -- HEADER LAYOUT END -- */
+
+/* -- HEADINGS AND GENERAL TEXT STYLING START -- */
+h1,
+h2,
+.pre-h1 {
+  color: hsl(234, 12%, 34%);
+}
+
+h1 {
+  font-size: 1.6rem;
+  padding: 10px 0px 20px;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+.pre-h1 {
+  font-size: 1.6rem;
+  font-weight: lighter;
+  padding-bottom: 2px;
+}
+
+p {
+  color: hsl(229, 6%, 66%);
+  line-height: 25px;
+}
+
+/* -- HEADINGS AND GENERAL TEXT STYLING END -- */
+
+/* -- MAIN CONTENT LAYOUT START-- */
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container div > p {
+  padding-top: 5px;
+  font-size: 0.85rem;
+}
+
+.outer,
+.center {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 15px 20px rgba(56, 99, 155, 0.164);
+
+  padding: 30px 30px;
+  width: 250px;
+  height: 170px;
+  margin-bottom: 25px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* --SUPERVISOR-- */
+.content-container > .outer:first-child {
+  border-top: solid 4px hsl(180, 62%, 55%);
+}
+
+/* --TEAM BUILDER-- */
+.content-container > div > .center:first-child {
+  border-top: solid 4px hsl(0, 78%, 62%);
+}
+
+/* --KARMA-- */
+.content-container > div > .center:last-child {
+  border-top: solid 4px hsl(34, 97%, 64%);
+}
+
+/* --CALCULATOR-- */
+.content-container > .outer:last-child {
+  border-top: solid 4px hsl(212, 86%, 64%);
+}
+
+/* IMAGE POSITIONING IN EACH BOX */
+.content-container div > img {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* -- MAIN CONTENT LAYOUT END -- */
+
+/* -- four card image filter -- */
+
+.outer:hover img,
+.center:hover img {
+  filter: invert(100%);
+}
+
+/* -- four card overlay -- */
+
+.card-overlay p {
+  font-size: 100px;
+}
+
+.card-overlay {
+  background-color: rgba(56, 99, 155, 0.116);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+  transition: transform 1s ease-out;
+}
+
+.center:hover .card-overlay,
+.outer:hover .card-overlay {
+  transform: translateY(0);
+}
+
+/* -- DESKTOP MEDIA QUERY START -- */
+
+@media screen and (min-width: 1140px) {
+  header {
+    margin-bottom: 30px;
+  }
+
+  header > p {
+    width: 540px;
+  }
+
+  h1,
+  .pre-h1 {
+    font-size: 2.4rem;
+  }
+
+  .content-container {
+    flex-direction: unset;
+  }
+
+  .center,
+  .outer {
+    width: 290px;
+    height: 180px;
+  }
+
+  .center {
+    margin: 30px 30px;
+  }
+}
+
+/* -- DESKTOP MEDIA QUERY END -- */

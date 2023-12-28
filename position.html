@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+        color: white;
+        font-size: x-large;
+      }
+      .container {
+        background-color: grey;
+        height: 500px;
+        /* margin-top: 5000px; need height for sticky */
+        /* position: relative; */
+        /* margin-left: 50px; */
+      }
+      .relative {
+        background-color: coral;
+        position: relative;
+        width: 300px;
+        height: 300px;
+        top: 50px;
+        left: 50px;
+      }
+      .fixed {
+        background-color: gold;
+        width: 300px;
+        height: 300px;
+        position: fixed;
+        top: 0px;
+        z-index: -1;
+      }
+      .sticky {
+        background-color: blueviolet;
+        width: 300px;
+        height: 300px;
+        position: sticky;
+        left: 100px;
+        top: 100px;
+        margin: 0px;
+      }
+      .absolute {
+        background-color: rgb(226, 43, 43);
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="fixed"></div>
+      <!-- <div class="sticky">I am sticky!</div> -->
+      <!-- <div class="relative">I am relative</div> -->
+
+      <!-- <div class="absolute"></div> -->
+      <p>I am some text to show how position effects others!</p>
+    </div>
+  </body>
+</html>

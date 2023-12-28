@@ -1,0 +1,93 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+@mixin general {
+  color: #ccc;
+  font-size: x-large;
+  font-weight: 500;
+  font-style: italic;
+}
+
+nav {
+  ul {
+    @include general();
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $primary-color;
+
+    li {
+      @include general();
+      display: inline-block;
+    }
+
+    a {
+      @include general();
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: green;
+      }
+    }
+  }
+}
+
+@mixin theme($theme: DarkGray) {
+  @include general;
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, 0.25);
+  color: #fff;
+}
+
+.info {
+  @include theme;
+}
+.alert {
+  @include theme($theme: DarkRed);
+}
+.success {
+  @include theme($theme: DarkGreen);
+}
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+  border-radius: 10;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+  border-radius: 10;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+  border-radius: 10;
+}

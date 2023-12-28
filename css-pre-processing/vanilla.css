@@ -1,0 +1,16 @@
+:root {
+  --important-color: #ff0000;
+}
+:root:lang(de) {
+  --important-color: #ff5353;
+}
+
+h1 {
+  color: var(--important-color);
+}
+
+div {
+  background-color: var(--important-color);
+  width: 500px;
+  height: 500px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: red;
+        width: 500px;
+        height: 250px;
+      }
+      .two {
+        background-color: green;
+      }
+      .three {
+        background-color: blue;
+      }
+
+      .container {
+        position: relative;
+      }
+
+      .one,
+      .two,
+      .three {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.1;
+      }
+
+      .one:target,
+      .two:target,
+      .three:target {
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one" id="one">1 <a href="#two">Next</a></div>
+      <div class="two" id="two">2<a href="#three">Next</a></div>
+      <div class="three" id="three">3<a href="#one">Next</a></div>
+    </div>
+  </body>
+</html>
